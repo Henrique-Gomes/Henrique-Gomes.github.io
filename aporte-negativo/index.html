@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <label for="prestacoes">Número de prestações:</label> <input type="number" id="prestacoes" name="Prestações" step="1" inputmode="numeric" pattern="[0-9]*" onkeydown="if(event.key===',' || event.key==='.' || event.key==='-'){event.preventDefault();}" oninput="handlePrestacoes(this.value)" onchange="handlePrestacoes(this.value)">
+
+        <label for="parcela">Parcela:</label> <input type="number" id="parcela" name="Parcela" onkeydown="updateResult()" oninput="handleParcela(this.value)" onchange="handleParcela(this.value)">
+
+        <label for="juro">Juro a.a (%):</label> <input type="number" id="juro" name="Juro" onkeydown="updateResult()" oninput="handleJuro(this.value)" onchange="handleJuro(this.value)">
+
+        Rendimento: <a id="result">0.00</a>
+
+        <script src="script.js" defer></script>
+    </body>
+</html>
